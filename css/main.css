@@ -1,0 +1,79 @@
+body{
+    background-color: #F7ECDE;
+}
+::selection{
+    background-color: #FDC260;
+}
+.container h1{
+    font-family: Pacifico, cursive;
+    font-size: 50px;
+    font-weight: 500;
+    width: fit-content;
+}
+.container h1::after{
+    content: "";
+    width: 100%;
+    height: 30%;
+    background-color: #FDC260;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+.container h1:hover::after{
+    height: 60%;
+}
+hr{
+    border: dashed 1px #352E28;
+}
+.container h2{
+    font-family: Righteous;
+    font-weight: 500;
+    font-size: 25px;
+    background: linear-gradient(to right ,rgba(64,166,93,1),rgba(64,166,93,1), rgba(179,172,74,1),rgb(226, 217, 92));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+label{
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+input{
+    border-color: #198754;
+}
+input:focus{
+    box-shadow: 0 0 0 .25rem ( #198754 , .25);
+}
+.container #addBtn{
+    background-color: #c5421e;
+}
+.container #addBtn:hover{
+    background-color: #BB411F;
+}
+table #visit{
+    background-color: #9EB23B;
+    color: white;
+    border: none;
+}
+table #del{
+    background-color: #d73321;
+    color: white;
+    border: none;
+}
+.container .modal h5{
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+.container .modal p i{
+    color: #BB411F;
+}
+.container .modal p{
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}

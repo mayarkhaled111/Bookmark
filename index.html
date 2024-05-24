@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="image/bookmark.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container ms-auto mt-5">
+        <h1 class="mb-5 m-auto position-relative">Bookmarker</h1>
+        <hr>
+        <h2 class="text-center mt-4"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        <form action="">
+            <label for="webName"><i class="fa-solid fa-file-signature"></i> Site Name</label>
+            <input type="text" class="form-control my-1" placeholder="Bookmark Name" id="webName" oninput="validation(this)">
+            <label for="webUrl"><i class="fa-solid fa-link mt-3"></i> Site URL</label>
+            <input type="url" class="form-control my-1" placeholder="Bookmark Url" id="webUrl" oninput="validation(this)">
+            <button class="btn btn-warning px-5 d-block m-auto my-3 text-light" type="button" id="addBtn">Submit</button>
+
+        </form>
+        <hr>
+        <table class="table" id="table">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center">Index</th>
+                <th scope="col" class="text-center">Website Name</th>
+                <th scope="col" class="text-center">Visit</th>
+                <th scope="col" class="text-center">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+<!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+              <div class="modal-header">
+                <span class="rounded-circle bg-danger" style="width: 20px; height: 20px;"></span>
+                <span class="rounded-circle bg-warning mx-2" style="width: 20px; height: 20px;"></span>
+                <span class="rounded-circle " style="width: 20px; height: 20px; background-color: green;"></span>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h5>Site Name or Url is not valid, Please follow the rules below :</h5>
+                <p><i class="fa-regular fa-circle-right me-2"></i>Site name must contain at least 3 characters</p>
+                <p><i class="fa-regular fa-circle-right me-2"></i>Site URL must be a valid one</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
